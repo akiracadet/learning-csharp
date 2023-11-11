@@ -1,0 +1,17 @@
+* Create the first program.
+
+-- run the following commands
+dotnet new console
+dotnet run
+
+
+
+
+
+
+
+
+
+
+
+* see commands for info about the commands used
