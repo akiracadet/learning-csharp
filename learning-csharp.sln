@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "programmingcsharp10", "programmingcsharp10", "{73EA7228-8CEC-4F63-A131-751541798C85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter01", "Chapter01", "{C88696E5-6C68-4451-A47E-FF11B0F3C295}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "programmingcsharp10\Chapter01\HelloWorld\HelloWorld.csproj", "{6F795497-9B7F-4117-BC36-162EF47A0E56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F795497-9B7F-4117-BC36-162EF47A0E56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F795497-9B7F-4117-BC36-162EF47A0E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F795497-9B7F-4117-BC36-162EF47A0E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F795497-9B7F-4117-BC36-162EF47A0E56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C88696E5-6C68-4451-A47E-FF11B0F3C295} = {73EA7228-8CEC-4F63-A131-751541798C85}
+		{6F795497-9B7F-4117-BC36-162EF47A0E56} = {C88696E5-6C68-4451-A47E-FF11B0F3C295}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE1F6E6E-FCE6-4CD5-95C5-76E490E0F699}
+	EndGlobalSection
+EndGlobal

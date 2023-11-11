@@ -1,0 +1,7 @@
+* Commands Run While Creating The App
+
+-- starts a new console project in the current directory using the dotnet cli
+dotnet new console
+
+-- runs the project if the command is run on the root of the project
+dotnet run
