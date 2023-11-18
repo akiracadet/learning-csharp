@@ -1,0 +1,153 @@
+This following example calculates the average (the arithmetic mean) of numbers.
+It is composed of a solution file, and two projects the main program, and
+a another program to test the main logic.
+
+
+# create a solution file for the example
+mkdir Averages
+cd Averages
+dotnet new sln
+
+# create the Averages program
+# the -o means output
+dotnet new console -o Averages
+
+# create the Averages.Tests program
+dotnet new mstest -o Averages.Tests
+
+# add the projects to the sln (solution) file
+dotnet sln add ./Averages/Averages.csproj
+dotnet sln add ./Averages.Tests/Averages.Tests.csproj
+
+# for us to make the Test project to work we need
+# to add reference of the Averages project
+dotnet add ./Averages.Tests/Averages.Tests.csproj reference ./Averages/Averages.csproj
+
+# create a WhenCalculatingAverages.cs file inside the Average.Tests directory and
+# put in the following code; this will be our test file
+---------------------------------------------- BEGIN CODE --------------------------------------------
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+namespace Averages.Tests;
+
+[TestClass]
+public class WhenCalculatingAverages
+{
+    [TestMethod]
+    public void SingleInputShouldProduceSameValueAsResult()
+    {
+        string[] inputs = {"1"};
+        double result = AverageCalculator.ArithmeticMean(inputs);
+        Assert.AreEqual(1.0, result, 1E-14);
+    }
+
+    [TestMethod]
+    public void MultipleInputsShouldProduceAverageAsResult()
+    {
+        string[] inputs = {"1", "2", "3"};
+        double result = AverageCalculator.ArithmeticMean(inputs);
+        Assert.AreEqual(2.0, result, 1E-14);
+    }
+}
+---------------------------------------------- END CODE ----------------------------------------------
+
+# create a AverageCalculator.cs file inside the Averages directory and
+# put in the following code; this will be our main program
+---------------------------------------------- BEGIN CODE --------------------------------------------
+namespace Averages;
+
+public static class AverageCalculator
+{
+    public static double ArithmeticMean(string[] args)
+    {
+        return 1.0;
+    }
+}
+---------------------------------------------- END CODE ----------------------------------------------
+
+# command to run the test
+dotnet test
+
+# Namespaces
+# namespaces make our code unique by adding identity to our named entities
+---------------------------------------------- BEGIN CODE --------------------------------------------
+// C# 10+ namespace declaration
+namespace Averages;
+
+// pre C# 10 namespace declaration 
+namespace Averages
+{
+    public static class AverageCalculator
+    {
+        public static double ArithmeticMean(string[] args)
+        {
+            return 1.0;
+        }
+    }
+}
+---------------------------------------------- END CODE ----------------------------------------------
+
+# using directives are used to access code inside a namespace
+# for example
+---------------------------------------------- BEGIN CODE --------------------------------------------
+// global using directive
+// see Usings.cs inside Averages.Tests directory
+global using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+// normal using directive
+using Averages;
+---------------------------------------------- END CODE ----------------------------------------------
+
+# ways to resolve ambiguity on namespaces using aliases
+---------------------------------------------- BEGIN CODE --------------------------------------------
+using System.IO;
+using System.Windows.Shapes;
+using IOPath = System.IO.Path;
+using WpfPath = System.Windows.Shapes.Path;
+---------------------------------------------- END CODE ----------------------------------------------
+
+# namespace nesting
+---------------------------------------------- BEGIN CODE --------------------------------------------
+// C# 10 above
+namespace MyApp.Storage;
+
+// below C# 10
+namespace MyApp
+{
+    namespace Storage
+    {
+        ...
+    }
+}
+---------------------------------------------- END CODE ----------------------------------------------
+
+# class keywords
+# public - enables the class to be accessed by other components
+# static - means that the class is not meant to be instantiated
+
+# Calculating Averages updating the AverageCalculator.cs file
+---------------------------------------------- BEGIN CODE --------------------------------------------
+namespace Averages;
+
+public static class AverageCalculator
+{
+    public static double ArithmeticMean(string[] args)
+    {
+        return args.Select(numText => double.Parse(numText)).Average();
+    }
+}
+---------------------------------------------- END CODE ----------------------------------------------
+
+# Calculating Averages updating the Program.cs file
+---------------------------------------------- BEGIN CODE --------------------------------------------
+using Averages;
+
+Console.WriteLine(AverageCalculator.ArithmeticMean(args));
+---------------------------------------------- END CODE ----------------------------------------------
+
+# rebuild the project
+dotnet build
+
+# attributes
+# attributes are annotations you can apply to classes, methods, and other features of the code.
+# for example the [TestClass] and [TestMethod] annotation in your WhenCalculatingAverages.cs file
