@@ -1,0 +1,2 @@
+# An example program for a variable declared outside block
+# and used within the block

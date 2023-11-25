@@ -1,0 +1,9 @@
+# Just another example
+# Note that this program is not runnable as it has no main method
+# for the program entry point
+
+mkdir HelloWorld
+cd ./HelloWorld
+dotnet new sln
+dotnet new console -o HelloWorld
+dotnet sln add ./HelloWorld/HelloWorld.csproj

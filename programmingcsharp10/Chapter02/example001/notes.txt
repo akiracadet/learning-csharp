@@ -1,0 +1,11 @@
+# Create a HelloWorld Program Example
+
+# Summary of step-by-step cli commands done to run the
+# project
+
+mkdir HelloWorld
+cd ./HelloWorld
+dotnet new sln
+dotnet new console -o HelloWorld
+dotnet sln add ./HelloWorld/HelloWorld.csproj
+dotnet run --project HelloWorld

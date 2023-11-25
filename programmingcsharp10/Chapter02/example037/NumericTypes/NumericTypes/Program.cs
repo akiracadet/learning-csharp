@@ -1,0 +1,1 @@
+﻿int result = checked(a + b) + c;

@@ -1,0 +1,3 @@
+# Getting an error from variables that are declared using var
+# when assigned a type other than what it is implicitly
+# defined

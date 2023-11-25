@@ -1,0 +1,4 @@
+# Implicit Conversions
+#   implicit conversions are scenarios that when an operation is done between
+#   two numeric types with different size/type the type that is lower is
+#   implicitly converted to the larger type

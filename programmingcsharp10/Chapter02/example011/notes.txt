@@ -1,0 +1,2 @@
+# An example program for variable scope error
+# when using a variable that is out of scope

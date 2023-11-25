@@ -1,0 +1,2 @@
+# An example program for variable name collisions
+# and how C# handles it to prevent ambiguity

@@ -1,0 +1,1 @@
+# Example of method invocation expressions as statements

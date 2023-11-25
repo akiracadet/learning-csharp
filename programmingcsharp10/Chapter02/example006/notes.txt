@@ -1,0 +1,2 @@
+# Example of declaring variables using the var keyword to
+# get the implicit value type

@@ -1,0 +1,6 @@
+# Explicit conversions with casts
+#   C#   will not allow conversions to a lower type value
+#   for example float to integer and will throw a
+#   compiler error.
+#   For it to work you can use explicit casts
+#   to convert it to a lower type

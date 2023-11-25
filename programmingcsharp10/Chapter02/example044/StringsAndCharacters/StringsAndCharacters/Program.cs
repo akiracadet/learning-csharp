@@ -1,0 +1,1 @@
+﻿Debug.Assert(everythingIsOk, $"Everything is *not* OK: {myApplicationModel}");
